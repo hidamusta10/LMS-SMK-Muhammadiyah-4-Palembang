@@ -38,7 +38,33 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   return (
     <div className="space-y-6">
-      
+      {/* School Portal Identity Title Bar */}
+      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 shadow-xs flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="flex items-center space-x-3.5">
+          <div className="w-10 h-10 rounded-xl bg-emerald-700 text-yellow-300 flex items-center justify-center font-black text-sm shadow-xs shrink-0 border border-yellow-400/50">
+            M4
+          </div>
+          <div>
+            <div className="flex items-center space-x-2">
+              <h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">
+                SMK Muhammadiyah 4 Palembang
+              </h2>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 uppercase tracking-wider">
+                Panel Admin
+              </span>
+            </div>
+            <p className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
+              Learning Management System & Portal Terintegrasi
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 font-medium">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span>Server Status: Online</span>
+        </div>
+      </div>
+
       {/* Admin Hero Banner */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 p-6 sm:p-8 text-white shadow-md">
         <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

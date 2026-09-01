@@ -58,15 +58,15 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <div className="flex items-center space-x-2">
-                <h1 className="text-base sm:text-xl font-bold leading-tight tracking-tight text-white">
-                  LMS SMK Muhammadiyah 4 Palembang
+                <h1 className="text-base sm:text-xl font-extrabold leading-tight tracking-tight text-white">
+                  SMK Muhammadiyah 4 Palembang
                 </h1>
                 <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-yellow-400 text-emerald-950 uppercase tracking-wider">
                   SMART
                 </span>
               </div>
-              <p className="text-[11px] text-emerald-100/90 uppercase tracking-widest font-medium hidden sm:block">
-                Portal Pendidikan Terintegrasi • Siap Kerja, Mandiri, Religius, Terampil
+              <p className="text-[11px] text-emerald-100 font-semibold tracking-wide hidden sm:block">
+                Learning Management System & Portal Terintegrasi
               </p>
             </div>
           </div>
