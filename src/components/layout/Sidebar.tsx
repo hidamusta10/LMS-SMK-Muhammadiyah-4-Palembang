@@ -33,6 +33,9 @@ import {
   History,
   Archive,
   Share2,
+  Code2,
+  Github,
+  Terminal,
 } from 'lucide-react';
 import { UserRole } from '../../types';
 
@@ -78,6 +81,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           section: 'Pembelajaran Utama',
           items: [
             { id: 'dashboard', label: '1. Dashboard', icon: LayoutDashboard },
+            { id: 'coding_lab', label: 'Lab Coding & GitHub', icon: Code2, badge: '8 Stack', badgeColor: 'bg-emerald-600 text-white' },
             { id: 'kelas_saya', label: '2. Kelas Saya', icon: BookOpen, badge: '4 Mapel' },
             { id: 'materi', label: '3. Materi Pembelajaran', icon: FileText },
             { id: 'tugas', label: '4. Tugas & Proyek', icon: CheckSquare, badge: '2 Baru', badgeColor: 'bg-amber-500 text-white' },
@@ -130,6 +134,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           section: 'Aktivitas Mengajar',
           items: [
             { id: 'dashboard', label: '1. Dashboard Guru', icon: LayoutDashboard },
+            { id: 'coding_lab', label: 'Lab Coding & Repositori', icon: Code2, badge: 'IDE', badgeColor: 'bg-emerald-600 text-white' },
             { id: 'jadwal', label: '2. Jadwal Mengajar Hari Ini', icon: Calendar },
             { id: 'kelas_saya', label: '3. Kelas yang Diampu', icon: BookOpen, badge: '3 Kelas' },
             { id: 'perangkat_ajar', label: '4. Perangkat Pembelajaran', icon: FolderGit2, badge: 'Approval' },

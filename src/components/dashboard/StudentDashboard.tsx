@@ -24,6 +24,9 @@ import {
   MessageSquare,
   Sparkles,
   Play,
+  Code2,
+  Github,
+  Terminal,
 } from 'lucide-react';
 
 interface StudentDashboardProps {
@@ -87,8 +90,15 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
 
           <div className="flex flex-wrap gap-2.5">
             <button
-              onClick={() => onNavigate('kelas_saya')}
+              onClick={() => onNavigate('coding_lab')}
               className="px-4 py-2.5 bg-yellow-400 hover:bg-yellow-300 text-emerald-950 font-bold text-xs rounded-xl shadow-xs flex items-center space-x-2 transition"
+            >
+              <Code2 className="w-3.5 h-3.5 text-emerald-950" />
+              <span>Studio Coding & GitHub</span>
+            </button>
+            <button
+              onClick={() => onNavigate('kelas_saya')}
+              className="px-4 py-2.5 bg-white/15 hover:bg-white/25 text-white font-semibold text-xs rounded-xl border border-white/20 flex items-center space-x-2 transition"
             >
               <Play className="w-3.5 h-3.5 fill-current" />
               <span>Buka Kelas Aktif</span>
@@ -98,10 +108,42 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               className="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl border border-white/20 flex items-center space-x-1.5 transition backdrop-blur-xs"
             >
               <Award className="w-3.5 h-3.5 text-yellow-300" />
-              <span>Portal CBT Online</span>
+              <span>Portal CBT</span>
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Featured Highlight: Vocational Coding Lab & GitHub Sync Banner */}
+      <div className="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 rounded-3xl p-5 sm:p-6 border border-emerald-800/40 text-white shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="flex items-start sm:items-center space-x-4">
+          <div className="p-3 bg-emerald-600/30 border border-emerald-500/40 rounded-2xl text-emerald-400 shrink-0">
+            <Terminal className="w-6 h-6" />
+          </div>
+          <div>
+            <div className="flex items-center space-x-2">
+              <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-emerald-500/30 uppercase tracking-wider">
+                Kejuruan RPL Interaktif
+              </span>
+              <span className="text-[10px] text-slate-400 font-mono">8 Tech Stacks</span>
+            </div>
+            <h3 className="text-base sm:text-lg font-extrabold text-white mt-1">
+              Laboratorium Coding .NET, Web, CodeIgniter, Xcode & GitHub
+            </h3>
+            <p className="text-xs text-slate-300 mt-0.5 line-clamp-1 sm:line-clamp-none">
+              Jalankan kode .NET Micro/Compact Framework, CodeIgniter MVC, HTML/CSS Web Design, dan push hasil jobsheet langsung ke repositori GitHub.
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={() => onNavigate('coding_lab')}
+          className="shrink-0 w-full md:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center space-x-2 transition shadow-md"
+        >
+          <Github className="w-4 h-4" />
+          <span>Buka Studio Coding & Sync GitHub</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </button>
       </div>
 
       {/* 2. Main Bento Grid Tiles */}

@@ -449,3 +449,86 @@ export interface HelpdeskTicket {
   status: 'Open' | 'In Progress' | 'Resolved' | 'Closed';
   priority: 'Rendah' | 'Sedang' | 'Tinggi';
 }
+
+// ==========================================
+// VOCATIONAL CODING LAB & GITHUB INTEGRATION
+// ==========================================
+
+export type TechStackId =
+  | 'dotnet_micro'
+  | 'dotnet_compact'
+  | 'web_programming'
+  | 'codeigniter'
+  | 'dotnet_framework'
+  | 'web_design'
+  | 'website_building'
+  | 'xcode';
+
+export interface CodeFile {
+  name: string;
+  language: 'csharp' | 'php' | 'html' | 'css' | 'javascript' | 'typescript' | 'swift' | 'json' | 'sql' | 'xml';
+  content: string;
+  description: string;
+  isEntry?: boolean;
+}
+
+export interface CodingModule {
+  id: TechStackId;
+  title: string;
+  subtitle: string;
+  category: 'Embedded & Mobile' | 'Web & Backend' | 'Design & Frontend' | 'Apple Native';
+  iconName: string;
+  color: string;
+  version: string;
+  level: 'Pemula' | 'Menengah' | 'Lanjutan' | 'Industri';
+  curriculumRef: string;
+  description: string;
+  overview: string;
+  coreConcepts: string[];
+  files: CodeFile[];
+  executionOutput: {
+    stdout: string;
+    metrics: { label: string; value: string }[];
+    status: 'Success' | 'Ready' | 'Compiled';
+  };
+  sampleProjects: {
+    title: string;
+    description: string;
+    tech: string[];
+    difficulty: string;
+  }[];
+}
+
+export interface GitHubUser {
+  login: string;
+  name: string;
+  avatar_url: string;
+  html_url: string;
+  bio?: string;
+  public_repos: number;
+  followers: number;
+  following: number;
+}
+
+export interface GitHubRepo {
+  id: number;
+  name: string;
+  full_name: string;
+  description: string | null;
+  html_url: string;
+  stargazers_count: number;
+  forks_count: number;
+  language: string | null;
+  updated_at: string;
+  default_branch: string;
+  private: boolean;
+}
+
+export interface GitHubCommit {
+  sha: string;
+  message: string;
+  authorName: string;
+  date: string;
+  url: string;
+}
+

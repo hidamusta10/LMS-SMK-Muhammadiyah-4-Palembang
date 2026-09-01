@@ -44,6 +44,7 @@ import { PKLView } from './components/vocational/PKLView';
 import { TEFAView } from './components/vocational/TEFAView';
 import { UKKPortfolioView } from './components/vocational/UKKPortfolioView';
 import { BKKView } from './components/vocational/BKKView';
+import { CodingLabView } from './components/vocational/CodingLabView';
 
 // Character & Communication Views
 import { IsmubaView } from './components/character/IsmubaView';
@@ -124,6 +125,7 @@ export default function App() {
   // Search Results Definition across all 20 structure menus
   const searchableMenus = [
     { id: 'dashboard', title: 'Dashboard Utama', desc: 'Ringkasan aktivitas, statistik, jadwal, dan tugas harian', category: 'Dasar' },
+    { id: 'coding_lab', title: 'Lab Coding & Repositori GitHub', desc: '.NET Micro, .NET Compact, Web, CodeIgniter, .NET Core, Web Design, Website Building, Xcode & Sync GitHub', category: 'Kejuruan' },
     { id: 'kelas_saya', title: 'Kelas Saya & Rombel', desc: 'Mata pelajaran, capaian pembelajaran & daftar teman sekelas', category: 'Pembelajaran' },
     { id: 'materi', title: 'Materi & Modul Ajar', desc: 'Jobsheet lab, slide presentasi, video pembelajaran, dan e-book', category: 'Pembelajaran' },
     { id: 'tugas', title: 'Tugas & Proyek Praktik', desc: 'Pengumpulan tugas coding, jobsheet bengkel, dan penilaian rubrik', category: 'Pembelajaran' },
@@ -275,6 +277,10 @@ export default function App() {
 
       case 'pkl':
         return <PKLView pklList={MOCK_PKL_STUDENTS} user={currentUser} />;
+
+      case 'coding_lab':
+      case 'lab_rpl':
+        return <CodingLabView />;
 
       case 'tefa':
         return <TEFAView tefaUnits={MOCK_TEFA_UNITS} />;
