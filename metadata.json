@@ -1,0 +1,6 @@
+{
+  "name": "LMS SMK Muhammadiyah 4 Palembang",
+  "description": "Platform Manajemen Pembelajaran Terintegrasi & Responsif SMK Muhammadiyah 4 Palembang dengan Layanan Akademik, PKL, Teaching Factory, UKK, ISMUBA, dan Komunikasi Sekolah.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
